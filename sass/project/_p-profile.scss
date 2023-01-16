@@ -1,0 +1,547 @@
+.p-profile{
+    &__inner{
+            background-color: #fff;
+            width: 942px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 35px 154px 235px 8px;
+            position: relative;
+            @include brSpLandscape{
+                background-color: transparent;
+                padding: 10px 0;
+            }
+    }
+    &__avatar{
+            &-edit{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: #4263EB;
+                @include brSpLandscape{
+                    display: block;
+                    text-align: center;
+                    margin-top: 16px;
+                }
+            }
+            img{
+                width: 82px;
+                height: 82px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+    }
+    &__name{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            color: #151514;
+            margin-bottom: 2px;
+            @include brSpLandscape{
+                display: none;
+            }
+    }
+    form{
+        h3{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            color: #000000;
+            margin-bottom: 34px;
+            @include brSpLandscape{
+                font-size: 16px;
+            }
+        }
+        .form-group{
+            display: flex;
+            margin-bottom: 24px;
+            @include brSpLandscape {
+                display: block;
+            }
+            &:nth-child(1) {
+                margin-bottom: 30px;
+                align-items: center;
+            }
+            &:nth-child(2) {
+                margin-bottom: 42px;
+            }
+            label,
+            .p-profile__avatar {
+                width: 150px;
+                min-width: 150px;
+                text-align: right;
+                margin-right: 33px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: #231F20;
+                @include brSpLandscape {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            label {
+                @include brSpLandscape {
+                    background-color: #fff;
+                    padding: 11px 10px;
+                    margin-bottom: 2px;
+                    text-align: left;
+                }
+            }
+            .form-group-input {
+                width: 100%;
+                position: relative;
+                input:focus + .message{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .message{
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .2s;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #231F20;
+                    width: 311px;
+                    padding: 10px 10px;
+                    position: absolute;
+                    top: calc(100% - 3px);
+                    left: 5px;
+                    background-color: #fff;
+                    box-shadow: 0px 4px 4px rgba(189, 189, 189, 0.25);
+                    z-index: 1;
+                    @include brSpLandscape{
+                        background-color: #DCDCDC;
+                    }
+                    &::before{
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-left: 7px solid transparent;
+                        border-right: 7px solid transparent;
+                        border-bottom: 14px solid #fff;
+                        position: absolute;
+                        top: -8px;
+                        left: 21px;
+                        @include brSpLandscape{
+                            border-bottom-color: #DCDCDC;
+                        }
+                    }
+                }
+            }
+            input {
+                background: #F7F7F7;
+                border: 1px solid #DCDCDC;
+                border-radius: 4px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                width: 100%;
+                height: 42px;
+                padding: 0 16px;
+                @include brSpLandscape {
+                    border: none;
+                    background: #fff;
+                    border-radius: 0 0 4px 4px;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                    border-color: #4263EB;
+                }
+                &::placeholder{
+                    color: #ADADAD;
+                }
+            }
+            small {
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 18px;
+                color: #ADADAD;
+            }
+        }
+        button[type=submit] {
+            display: flex;
+            margin-left: auto;
+            margin-top: 33px;
+            background: #4263EB;
+            border-radius: 4px;
+            padding: 7px 10px 3px;
+            width: 149px;
+            justify-content: center;
+            text-align: center;
+            @include brSpLandscape {
+                margin: 0;
+                position: absolute;
+                top: 9px;
+                right: 0;
+                color: #4263EB;
+                background: transparent;
+                border: none;
+                padding: 0;
+                width: auto;
+            }
+        }
+    }
+
+    &-change-password{
+        form button[type=submit]{
+            margin-left: 183px;
+            @include brSpLandscape{
+                position: static;
+                margin-left: auto;
+                margin-right: auto;
+                background: #4263EB;
+                border-radius: 4px;
+                padding: 7px 10px 3px;
+                color: #fff;
+            }
+        }
+        .p-profile__forgot-password{
+            margin-left: 183px;
+            font-size: 16px;
+            line-height: 23px;
+            color: #4263EB;
+            margin-top: 15px;
+            @include brSpLandscape{
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    &-help{
+        .p-profile__inner{
+            padding: 38px 80px;
+            @include brSpLandscape{
+                padding: 10px 0;
+            }
+        }
+        &__title{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            color: #000000;
+            margin-bottom: 22px;
+            @include brSpLandscape{
+                font-size: 20px;
+                line-height: 26px;
+                margin-bottom: 14px;
+            }
+        }
+        &__search{
+            margin-bottom: 42px;
+            @include brSpLandscape{
+                margin-bottom: 23px;
+            }
+            input{
+                border-radius: 8px;
+                height: 68px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #ADADAD;
+                border: none;
+                width: 100%;
+                padding: 0 20px 0 64px;
+                background: #F7F7F7 url("../img/profile/icn_search.svg") no-repeat 16px center;
+                @include brSpLandscape{
+                    padding-left: 45px;
+                    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
+                    background-color: #fff;
+                    height: 34px;
+                    background-image: url("../img/profile/icn_search_small.svg");
+                }
+            }
+        }
+        &__list{
+            .card{
+                border: none;
+                margin-bottom: 16px;
+                @include brSpLandscape{
+                    margin-bottom: 8px;
+                }
+            }
+            .card-body{
+                @include brSpLandscape{
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+            .card-header{
+                padding: 9px 14px;
+                
+                background: #FFF6FF;
+                border-radius: 8px;
+                border-bottom: none;
+                @include brSpLandscape{
+                    padding: 0 5px;
+                    background: #ECE4EF url("../img/profile/icn_plus-lg.svg") no-repeat calc(100% - 10px) center;
+                    border-radius: 6px !important;
+                    padding-right: 50px;
+                }
+                button{
+                    color: #606060;
+                    @include brSpLandscape{
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    &:focus{
+                        box-shadow: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    &-payment{
+        .container{
+            width: 1200px;
+            max-width: 100%;
+        }
+        .p-profile__inner{
+            width: 1170px;
+            padding: 30px 40px;
+            @include brSpLandscape{
+                padding: 30px 0;
+            }
+        }
+        &__top{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            h5{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 18px;
+                color: $cBase;
+                @include brSpLandscape{
+                    font-size: 16px;
+                }
+            }
+            a{
+                background: #4263EB;
+                border-radius: 4px;
+                color: #fff;
+                font-weight: 500;
+                padding: 9px 40px 6px;
+                font-size: 16px;
+                line-height: 21px;
+                @include brSpLandscape{
+                    font-size: 14px;
+                    padding: 9px 20px 6px;
+                }
+            }
+        }
+        &__item{
+            padding: 23px 15px 21px;
+            background: #F7F7F7;
+            border: 1px solid #DCDCDC;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            &-left{
+                max-width: calc(100% - 80px);
+            }
+
+            &-right{
+                img{
+                    @include brSpLandscape{
+                        width: 20px;
+                    }
+                }
+                a + a{
+                    margin-left: 20px;
+                }
+            }
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+                position: absolute;
+                left: -9999px;
+            }
+            [type="radio"]:checked + label,
+            [type="radio"]:not(:checked) + label
+            {
+                position: relative;
+                padding-left: 58px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 18px;
+                color: #231F20;
+                display: inline-block;
+                @include brSpLandscape{
+                    font-size: 14px;
+                    padding-left: 40px;
+                }
+            }
+            [type="radio"]:checked + label:before,
+            [type="radio"]:not(:checked) + label:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -7px;
+                width: 32px;
+                height: 32px;
+                border: 2px solid $cBase;
+                border-radius: 100%;
+                background: #fff;
+            }
+            [type="radio"]:checked + label:after,
+            [type="radio"]:not(:checked) + label:after {
+                content: '';
+                width: 18px;
+                height: 18px;
+                background: $cBase;
+                position: absolute;
+                top: 0;
+                left: 7px;
+                border-radius: 100%;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+            [type="radio"]:not(:checked) + label:after {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            [type="radio"]:checked + label:after {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+    }
+    &-payment-add{
+        .container{
+            width: 1200px;
+            max-width: 100%;
+        }
+        .p-profile__inner{
+            width: 1170px;
+            padding: 11px 36px;
+            @include brSpLandscape{
+                padding: 11px 0;
+            }
+        }
+        &__bill, &__cost{
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: 500;
+            @include brSpLandscape{
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        &__top{
+            padding: 11px 13px 8px;
+            background: #F7F7F7;
+            border: 1px solid #DCDCDC;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+        form{
+            button[type=submit]{
+                @include brSpLandscape{
+                    position: static;
+                    background: #4263EB;
+                    border-radius: 4px;
+                    padding: 7px 10px 3px;
+                    color: #fff;
+                    width: 100%;
+                }
+            }
+            .form-group{
+                width: 700px;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                &:nth-child(2) {
+                    margin-bottom: 20px;
+                }
+            }
+            .security{
+                .form-group-input{
+                    width: auto;
+                }
+                input{
+                    width: 160px;
+                    @include brSpLandscape{
+                        width: 100%;
+                    }
+                }
+                a{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 21px;
+                    margin-left: 11px;
+                }
+            }
+            .form-group-select{
+                select{
+                    background: #F7F7F7;
+                    border: 1px solid #DCDCDC;
+                    border-radius: 4px;
+                    width: 120px;
+                    height: 42px;
+                    padding: 0 10px;
+                    appearance: none;
+                    background: url("../img/profile/icn_select_down.svg") no-repeat right center;
+                }
+            }
+            .form-group-radio{
+                @include brSpLandscape{
+                    display: inline-block;
+                }
+                label{
+                    width: auto;
+                    min-width: auto;
+                    margin-right: 15px;
+                    @include brSpLandscape{
+                        padding: 0;
+                    }
+                }
+                select{
+                    background: #F7F7F7;
+                    border: 1px solid #DCDCDC;
+                    border-radius: 4px;
+                    width: 120px;
+                    height: 42px;
+                    padding: 0 10px;
+                    appearance: none;
+                }
+            }
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+                position: absolute;
+                left: -9999px;
+            }
+            [type="radio"]:checked + label,
+            [type="radio"]:not(:checked) + label
+            {
+                position: relative;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 18px;
+                color: #231F20;
+                display: inline-block;
+            }
+            [type="radio"]:not(:checked) + label {
+                
+            }
+            [type="radio"]:checked + label {
+                border: 1px solid $cBase;
+                border-radius: 4px;
+            }
+        }
+    }
+}

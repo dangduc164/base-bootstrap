@@ -1,0 +1,202 @@
+.p-login {
+    text-align: center;
+    background: linear-gradient(107.16deg, #4F92FF 12.87%, #7B89FF 50.73%, #946DFF 97.71%);
+    .l-container{
+        @include brSpLandscape{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 919px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(19.5px);
+        border-radius: 8px;
+        height: calc(100vh - 40px);
+        margin-top: 20px;
+        @include brSpLandscape{
+            height: 556px;
+            margin-top: 0;
+        }
+    }
+    &__title{
+        margin-top: 51px;
+        @include brSpLandscape{
+            margin-top: 35px;
+        }
+        h3{
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 52px;
+            color: #FFFFFF;
+            margin-bottom: 2px;
+            @include brSpLandscape{
+                font-size: 24px;
+                line-height: 31px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+        }
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            @include brSpLandscape{
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+            }
+            a{
+                color: $cBase;
+                margin-left: 5px;
+                text-decoration: underline;
+            }
+        }
+    }
+    form{
+        width: 545px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 48px;
+        text-align: left;
+        @include brSpLandscape{
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 24px;
+        }
+        .form-group{
+            position: relative;
+            margin-bottom: 24px;
+            .col-12 + .col-12{
+                @include brSpLandscape{
+                    margin-top: 22px;
+                }
+            }
+            @include brSpLandscape{
+                margin-bottom: 22px;
+            }
+            .toggle-password{
+                cursor: pointer;
+                position: absolute;
+                right: 36px;
+                bottom: 9px;
+                z-index: 1;
+                @include brSpLandscape{
+                    right: 18px;
+                    bottom: 3px;
+                }
+            }
+        }
+        label{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
+            @include brSpLandscape{
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+        input{
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid #FFFFFF;
+            border-radius: 8px;
+            height: 54px;
+            @include brSpLandscape{
+                height: 42px;
+            }
+            &:focus{
+                border-color: #fff;
+                background-color: inherit;
+                box-shadow: none;
+                color: #fff;
+            }
+        }
+        .forgot-password{
+            text-align: right;
+            margin-top: -20px;
+            margin-bottom: 29px;
+            @include brSpLandscape{
+                margin-top: -25px;
+                margin-bottom: 18px;
+            }
+            a{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: #FFFFFF;
+                display: inline-block;
+                @include brSpLandscape{
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+    .btn-primary{
+        padding-top: 8px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        color: #FFFFFF;
+        background: linear-gradient(180deg, $cBase 0%, #91268A 31%, #AB218E 100%);
+        border-radius: 8px;
+        border: none;
+        width: 100%;
+        height: 54px;
+        line-height: 41px;
+        @include brSpLandscape{
+            height: 40px;
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+}
+
+.p-register{
+    &.p-login form .btn-primary{
+        margin-top: 12px;
+    }
+    &__notice{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+        margin-top: 16px;
+    }
+    &__inner{
+        @include brSpLandscape{
+            height: 645px;
+        }
+    }
+}
+
+.p-register-2{
+    &__inner{
+        @include brSpLandscape{
+            height: 753px;
+        }
+    }
+}
+
+.p-forgot-password{
+    &__icon{
+        img{
+            @include brSpLandscape{
+                width: 114px;
+            }
+        }
+    }
+}
+

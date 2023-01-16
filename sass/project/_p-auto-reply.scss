@@ -1,0 +1,188 @@
+.p-auto-reply {
+    &__main {
+        margin-top: 10px;
+        padding-bottom: 40px;
+        @include brSpLandscape {
+            margin-top: 16px;
+        }
+        .container {
+            max-width: 972px;
+        }
+        &__inner {
+            background-color: #fff;
+            padding: 25px 31px 25px 40px;
+            @include brSpLandscape {
+                border-radius: 4px;
+                padding: 15px 26px 25px 16px;
+            }
+            &-title {
+                h3 {
+                    font-family: 'MarketSans-medium';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 18px;
+                    color: #000000;
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-family: 'MarketSans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #000000;
+                    padding-left: 9px;
+                    position: relative;
+                    &::after {
+                        content: '●';
+                        position: absolute;
+                        left: -2px;
+                        top: 0;
+                    }
+                }
+            }
+            &__setting {
+                @include brSpLandscape {
+                    margin-top: 7px;
+                }
+                &-item {
+                    padding: 27px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #F1F1F1;
+                    @include brSpLandscape {
+                        padding: 15px 0;
+                    }
+                    h4 {
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #231F20;
+                    }
+                    &.select {
+                        width: 54%;
+                        padding: 32px 0 0;
+                        align-items: flex-start;
+                        border-bottom: none;
+                        .form-group-select {
+                            display: flex;
+                            align-items: center;
+                            gap: 18px;
+                        }
+                        @include brSpLandscape {
+                            display: block;
+                            width: 100%;
+                            padding: 41px 0 0;
+                            h4 {
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                    &.radio {
+                        padding: 10px 0;
+                        width: 54%;
+                        align-items: flex-start;
+                        border-bottom: none;
+                        @include brSpLandscape {
+                            display: block;
+                            width: 100%;
+                            h4 {
+                                margin-bottom: 16px;
+                            }
+                        }
+                        .form-radio {
+                            width: 280px;
+                            max-width: 100%;
+                            background: #F7F7F7;
+                            border: 1px solid #DCDCDC;
+                            border-radius: 4px;
+                            padding: 13px 11px 8px 16px;
+                            p {
+                                padding-bottom: 9px;
+                                label {
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 18px;
+                                    color: #000000;
+                                    width: 100%;
+                                }
+                            }
+                            [type="radio"]:checked,
+                            [type="radio"]:not(:checked) {
+                                position: absolute;
+                                left: -9999px;
+                            }
+                            [type="radio"]:checked+label,
+                            [type="radio"]:not(:checked)+label {
+                                position: relative;
+                                cursor: pointer;
+                                display: inline-block;
+                            }
+                            [type="radio"]:checked+label:before,
+                            [type="radio"]:not(:checked)+label:before {
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                top: -2px;
+                                width: 23px;
+                                height: 23px;
+                                border: 2px solid #DCDCDC;
+                                border-radius: 100%;
+                                transition: .4s all ease;
+                            }
+                            [type="radio"]:checked+label:before {
+                                border: 2px solid #4263EB;
+                            }
+                            [type="radio"]:checked+label:after,
+                            [type="radio"]:not(:checked)+label:after {
+                                content: '';
+                                width: 13px;
+                                height: 13px;
+                                background: #4263EB;
+                                position: absolute;
+                                right: 5px;
+                                top: 3px;
+                                border-radius: 50%;
+                                transition: all 0.4s ease;
+                            }
+                            [type="radio"]:not(:checked)+label:after {
+                                opacity: 0;
+                                -webkit-transform: scale(0);
+                                transform: scale(0);
+                            }
+                            [type="radio"]:checked+label:after {
+                                opacity: 1;
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                    select {
+                        background: #F7F7F7;
+                        border: 1px solid #DCDCDC;
+                        border-radius: 4px;
+                        width: 120px;
+                        height: 42px;
+                        padding: 0 10px;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        background: url("../img/profile/icn_select_down.svg") no-repeat right center;
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}

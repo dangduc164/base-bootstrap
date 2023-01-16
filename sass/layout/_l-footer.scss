@@ -1,0 +1,552 @@
+.l-footer {
+    .l-container-fluid {
+        width: 1383px;
+    }
+    .l-row {
+        @media (min-width: 1920px) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__contact {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        + .l-footer__content{
+            @include brSpLandscape{
+                padding-top: 82px;
+            }
+        }
+        @include brSpLandscape {
+            padding: 32px 0 40px;
+            margin-bottom: -85px;
+        }
+        &__info{
+            max-width: 50%;
+            @include brSpLandscape{
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &__inner {
+            display: flex;
+            align-items: center;
+            width: 606px;
+            padding: 125px 104px 126px 88px;
+            width: 1110px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            background: url('../img/common/bg_contact.png') no-repeat center;
+            background-size: cover;
+            border-radius: 24px;
+            justify-content: space-between;
+            gap: 50px;
+            @include brTablet{
+                padding: 60px 30px;
+            }
+            @include brSpLandscape {
+                display: block;
+                text-align: center;
+                padding: 52px 0 61px 0;
+                border-radius: 8px;
+            }
+            h3 {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 40px;
+                line-height: 48px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-bottom: 16px;
+                @include brTablet{
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                @include brSpLandscape {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+            p {
+                margin-top: 8px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 32px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                @include brTablet{
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                @include brSpLandscape {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 15px;
+                }
+            }
+        }
+        &__group-btn {
+            text-align: center;
+            @include brSpLandscape {
+                margin-top: 43px;
+            }
+            .c-btn {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 48px;
+                color: #fff;
+                width: 352px;
+                height: 97px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                border: 1.5px solid #FFFFFF;
+                border-radius: 80px;
+                @include brTablet{
+                    font-size: 18px;
+                    line-height: 28px;
+                    width: 270px;
+                    height: 70px;
+                }
+                @include brSpLandscape{
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 48px;
+                    width: 196px;
+                    height: 48px;
+                    img{
+                        width: 37.45px;
+                    }
+                }
+                span{
+                    margin-right: 48px;
+                    margin-left: 13px;
+                    @include brSpLandscape{
+                        margin-right: 13px;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        background: url("../img/common/bg_footer.jpg") no-repeat center;
+        background-size: cover;
+        @include brSpLandscape {
+            background: url("../img/common/bg_footer-sp.jpg") no-repeat center;
+            background-size: cover;
+        }
+    }
+    &__main {
+        margin-top: -70px;
+        padding: 200px 0 73px;
+        @include brSpLandscape {
+            margin-top: 0;
+            padding: 42px 0 0;
+        }
+        &__header {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 25px;
+            @include brTablet {
+                display: block;
+                padding-bottom: 56px;
+            }
+            @include brSpLandscape {
+                text-align: center;
+                padding-bottom: 49px;
+            }
+            &__logo {
+                flex: 38%;
+                max-width: 38%;
+                @include brSpLandscape {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+            &__slogan {
+                flex: calc(100% - 38%);
+                max-width: calc(100% - 38%);
+                @include brSpLandscape {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 32px;
+                    padding-left: 5px;
+                    color: #FFFFFF;
+                    margin-top: 11px;
+                    @include brSpLandscape {
+                        margin-top: -7px;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        &__logo {
+            margin-bottom: 41px;
+            @include brSpLandscape {
+                margin-bottom: 22px;
+            }
+            img {
+                @include brSpLandscape {
+                    width: 167.6px;
+                }
+            }
+        }
+        .l-row {
+            >div {
+                @include brTablet {
+                    flex: 50%;
+                    max-width: 50%;
+                }
+                @include brSpLandscape {
+                    flex: 100%;
+                    max-width: 100%;
+                    margin-bottom: 13px;
+                }
+                &.l-footer__main__menu,&.l-footer__main__benefits{
+                    @include brSpLandscape {
+                        flex: 50%;
+                        max-width: 50%;
+                        margin-top: 17px;
+                    }
+                }
+                &.l-footer__main__office {
+                    margin-bottom: 13px;
+                    @include brSpLandscape {
+                        padding-right: 5px;
+                    }
+                }
+                &.l-footer__main__service {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &__office {
+            .l-footer__main__content>ul>li {
+                margin-bottom: 16px;
+                @include brSpLandscape {
+                    margin-bottom: 17px;
+                }
+            }
+            @include brTablet {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        &__menu {
+            padding-left: 2.65625vw;
+            @include brSmallPc {
+                padding-left: 15px;
+            }
+            @include brSpLandscape {
+                margin-top: 17px;
+            }
+        }
+        &__benefits {
+            margin-left: 2.4vw;
+            @include brTablet {
+                margin-left: 0;
+                @include brSpLandscape {
+                    margin-top: 30px;
+                }
+            }
+        }
+        &__keep {
+            margin-left: 1.710417vw;
+            @include brTablet {
+                margin-left: 0;
+            }
+            @include brSpLandscape {
+                margin-top: 15px;
+            }
+        }
+        &__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+            position: relative;
+            padding-bottom: 13px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            @include brTablet {
+                font-size: 20px;
+                padding-bottom: 18px;
+                line-height: 23px;
+                margin-bottom: 30px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                height: 5px;
+                border-radius: 5px;
+                background-color: #4291F6;
+                @include brTablet {
+                    width: 30px;
+                    height: 5px;
+                }
+            }
+        }
+        &__content {
+            &__download-app{
+                margin-top: 24px;
+                > p{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 25px;
+                    letter-spacing: 0.01em;
+                    color: #FFF;
+                    margin-bottom: 12px;
+                }
+                > ul{
+                    > li{
+                        margin-bottom: 16px;
+                    }
+                    @include brSpLandscape{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 16px;
+                        align-items: center;
+                    }
+                }
+            }
+            &-rules {
+                &.item-sp {
+                    @include brSpLandscape {
+                        margin-top: 30px;
+                        padding-bottom: 21px;
+                    }
+                }
+            }
+            &__item {
+                margin-top: 21px;
+                @include brTablet {
+                    margin-top: 23px;
+                }
+                h5 {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: #F9F9F9;
+                    margin-bottom: 7px;
+                    @include brTablet {
+                        margin-bottom: 4px;
+                    }
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: #F9F9F9;
+                    opacity: 0.68;
+                    &.email {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        padding-top: 13px;
+                    }
+                }
+            }
+            &__keep {
+                margin-top: 88px;
+                @include brTablet {
+                    margin-bottom: 50px;
+                }
+                &.item-sp {
+                    @include brSpLandscape {
+                        margin-top: 15px;
+                        padding-left: 15px;
+                    }
+                }
+                &-item {
+                    margin-top: -18px;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        gap: 14px;
+                    }
+                }
+            }
+            >ul {
+                >li {
+                    display: flex;
+                    margin-bottom: 24px;
+                    padding-left: 15px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background: rgba($color: #fff, $alpha: 0.68);
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        left: 0;
+                        top: 7px;
+                    }
+                    @include brSpLandscape {
+                        margin-bottom: 15px;
+                    }
+                    >a {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                        opacity: 0.68;
+                        white-space: nowrap;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    .icon {
+                        min-width: 37px;
+                        &-envelop {
+                            position: relative;
+                            top: 3px;
+                        }
+                    }
+                    h5 {
+                        font-size: 16px;
+                        line-height: 25px;
+                        font-weight: 400;
+                        letter-spacing: 0.01em;
+                        color: #FFFFFF;
+                        @include brSpLandscape {
+                            font-size: 14px;
+                            line-height: 19px;
+                            margin-bottom: 12px;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 25px;
+                        letter-spacing: 0.01em;
+                        color: #FFFFFF;
+                        opacity: 0.68;
+                        @include brSpLandscape {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &__social-link {
+            margin-bottom: 44px;
+            @include brSpLandscape {
+                margin-bottom: 17px;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                @include brSpLandscape {
+                    margin-top: -7px;
+                }
+                li {
+                    +li {
+                        margin-left: 14px;
+                        @include brSpLandscape {
+                            margin-left: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        &__link {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            color: #FFFFFF;
+            font-size: 14px;
+            display: block;
+            text-decoration: underline;
+            margin-bottom: 12px;
+            @include brSpLandscape {
+                margin-bottom: 10px;
+            }
+        }
+        .c-btn__view-map{
+            color: #fff;
+        }
+    }
+    &__copyright {
+        padding: 34px 0 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        position: relative;
+        .l-container-fluid {
+            position: relative;
+        }
+        @include brSpLandscape {
+            padding: 24px 0 30px;
+        }
+        &__logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 19px;
+            @include brSpLandscape {
+                top: calc(50% - 66px);
+                img {
+                    width: 153px;
+                }
+            }
+            &--right {
+                left: unset;
+                right: 91px;
+                @include brTablet{
+                    right: 15px;
+                }
+                @include brSpLandscape {
+                    right: 53px;
+                    img {
+                        width: 93px;
+                    }
+                }
+            }
+        }
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            br {
+                display: none;
+                @include brSpLandscape {
+                    display: inline-block;
+                }
+            }
+            @include brTablet {
+                font-size: 14px;
+            }
+            @include brSpLandscape {
+                font-size: 16px;
+                margin-top: 59px;
+                text-align: center;
+            }
+        }
+    }
+}

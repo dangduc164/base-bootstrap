@@ -1,0 +1,190 @@
+.p-notice {
+    &__main {
+        padding-bottom: 60px;
+        .container {
+            max-width: 972px;
+        }
+        &__inner {
+            background: #FFFFFF;
+            padding: 31px 34px;
+            @include brSpLandscape {
+                margin-top: 16px;
+                background: none;
+                padding: 0;
+            }
+        }
+        &__system {
+            &-notification {
+                margin-bottom: 32px;
+                @include brSpLandscape {
+                    margin-bottom: 16px;
+                    border-radius: 4px;
+                    background: #fff;
+                    padding: 13px 21px 1px 17px;
+                }
+                &-one {
+                    margin-top: 31px;
+                    @include brSpLandscape {
+                        margin-top: 16px;
+                        border-radius: 4px;
+                        background: #fff;
+                        padding: 13px 21px 1px 17px;
+                    }
+                    .p-notice__main__setting {
+                        border-bottom: none;
+                    }
+                }
+            }
+            &-auto-trans {
+                @include brSpLandscape {
+                    border-radius: 4px;
+                    background: #fff;
+                    padding: 13px 21px 7px 17px;
+                }
+            }
+        }
+        &__setting {
+            border-bottom: 1px solid #F1F1F1;
+            border-radius: 4px;
+            @include brSpLandscape {
+                border-bottom: none;
+            }
+            &__title {
+                font-family: 'MarketSans-semibold';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 18px;
+                color: #852988;
+                margin-bottom: 35px;
+                position: relative;
+                &::before {
+                    display: none;
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 39px);
+                    height: 1px;
+                    background-color: #F1F1F1;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                @include brSpLandscape {
+                    font-family: 'MarketSans-medium';
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #151514;
+                    padding-bottom: 10px;
+                    margin-bottom: 15px;
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+            &__desc {
+                font-family: 'MarketSans-medium';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 18px;
+                color: #231F20;
+                span {
+                    font-family: 'MarketSans-medium';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #DCDCDC;
+                    margin-left: 7px;
+                }
+                @include brSpLandscape {
+                    font-family: 'MarketSans';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    span {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+            &__content {
+                +.p-notice__main__setting__content {
+                    margin-top: 20px;
+                    padding-top: 25px;
+                    border-top: 1px solid #F1F1F1;
+                    @include brSpLandscape {
+                        border: none;
+                    }
+                }
+                .form-switch {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 29px;
+                    @include brSpLandscape {
+                        margin-bottom: 17px;
+                    }
+                }
+                .form-group {
+                    display: block;
+                    margin-bottom: 13px;
+                    margin-top: -2px;
+                    @include brSpLandscape {
+                        margin-bottom: 3px;
+                    }
+                }
+                .form-group input {
+                    padding: 0;
+                    height: initial;
+                    width: initial;
+                    margin-bottom: 0;
+                    display: none;
+                    cursor: pointer;
+                }
+                .form-group label {
+                    position: relative;
+                    cursor: pointer;
+                    @include brSpLandscape {
+                        font-family: 'MarketSans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+                .form-group label:before {
+                    content: '';
+                    -webkit-appearance: none;
+                    background-color: transparent;
+                    border: 1px solid #ADADAD;
+                    padding: 8px;
+                    display: inline-block;
+                    position: relative;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    margin-right: 36px;
+                    border-radius: 3px;
+                    @include brSpLandscape {
+                        margin-right: 12px;
+                    }
+                }
+                .form-group input:checked+label {
+                    &:after {
+                        content: url('../img/setting/icn_checkbox.svg');
+                        display: block;
+                        position: absolute;
+                        top: 2.5px;
+                        left: 3.5px;
+                    }
+                    &::before {
+                        background: #4263EB;
+                        border-color: #4263EB;
+                    }
+                }
+            }
+        }
+    }
+}

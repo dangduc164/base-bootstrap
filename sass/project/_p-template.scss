@@ -1,0 +1,278 @@
+.p-template {
+    &__main {
+        margin-top: 7px;
+        padding-bottom: 40px;
+        @include brSpLandscape {
+            margin-top: 16px;
+        }
+        .container {
+            max-width: 972px;
+        }
+        &-title {
+            font-family: 'MarketSans-semibold';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            color: #231F20;
+        }
+        &__inner {
+            background-color: #fff;
+            padding: 25px 23px 139px 40px;
+            @include brSpLandscape {
+                border-radius: 4px;
+                padding: 15px 16px 25px 16px;
+            }
+            &-title {
+                margin-bottom: 26px;
+                h3 {
+                    font-family: 'MarketSans-semibold';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 18px;
+                    color: #852988;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-family: 'MarketSans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #000000;
+                }
+            }
+            &__template {
+                &-form {
+                    border-bottom: 1px solid #F1F1F1;
+                    padding-bottom: 24px;
+                    .form {
+                        &-item {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-bottom: 7px;
+                            @include brSpLandscape {
+                                display: block;
+                            }
+                            >label {
+                                width: 100px;
+                            }
+                            &-input {
+                                width: calc(100% - 100px);
+                                p {
+                                    font-size: 12px;
+                                    line-height: 16px;
+                                    color: #231F20;
+                                    margin-top: 7px;
+                                }
+                                @include brSpLandscape {
+                                    width: 100%;
+                                }
+                            }
+                            &:nth-child(2) {
+                                .form-item-input {
+                                    p {
+                                        margin-top: -3px;
+                                    }
+                                }
+                            }
+                        }
+                        &-btn {
+                            text-align: end;
+                            margin-top: 15px;
+                            .btn {
+                                padding: 10px 51px;
+                                font-family: 'MarketSans-semibold';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 18px;
+                                border-radius: 4px;
+                                border: none;
+                                &-primary {
+                                    background: #4263EB;
+                                }
+                                &-secondary {
+                                    background: #514B4D;
+                                }
+                                &:hover {
+                                    background: #852988;
+                                }
+                                &:focus,
+                                &:focus-visible {
+                                    box-shadow: none;
+                                }
+                            }
+                            @include brSpLandscape {
+                                .btn {
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    padding: 7px 37px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-list {
+                    margin-top: 20px;
+                    .box {
+                        margin-bottom: 12px;
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                        &-head {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: space-between;
+                            &__handle {
+                                a {
+                                    +a {
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        &-content {
+                            margin-top: 4px;
+                            input {
+                                height: 54px;
+                                padding: 0 19px;
+                            }
+                        }
+                        &-modal {
+                            &-edit {
+                                .modal {
+                                    &-dialog {
+                                        width: 942px;
+                                        max-width: calc(100% - 100px);
+                                        position: relative;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        @include brSpLandscape {
+                                            max-width: calc(100% - 32px);
+                                        }
+                                    }
+                                    &-content {
+                                        border-radius: 0;
+                                        padding: 16px 19px 0 44px;
+                                        @include brSpLandscape {
+                                            padding: 6px 20px;
+                                            border-radius: 4px;
+                                        }
+                                    }
+                                    &-header {
+                                        display: block;
+                                        text-align: center;
+                                        border: none;
+                                        h5 {
+                                            font-family: 'MarketSans-semibold';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 36px;
+                                            line-height: 47px;
+                                            color: #852988;
+                                        }
+                                        @include brSpLandscape {
+                                            h5 {
+                                                font-size: 20px;
+                                                line-height: 26px;
+                                                color: #852988;
+                                            }
+                                        }
+                                        .close {
+                                            position: absolute;
+                                            right: -33px;
+                                            top: -33px;
+                                            @include brSpLandscape {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    &-body {
+                                        margin-top: 7px;
+                                        .p-template__main__inner__template-form {
+                                            margin-top: 33px;
+                                            border: none;
+                                            @include brSpLandscape {
+                                                margin-top: 0;
+                                            }
+                                            .form-btn {
+                                                @include brSpLandscape {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    align-items: center;
+                                                    justify-content: end;
+                                                    gap: 8px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &-delete {
+                                .modal-content {
+                                    padding: 35px 40px 32px;
+                                    @include brSpLandscape {
+                                        padding: 35px 19px 32px;
+                                    }
+                                }
+                                .modal-body {
+                                    p {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        font-family: 'MarketSans-medium';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 21px;
+                                        color: #000000;
+                                        img {
+                                            margin-right: 17px;
+                                        }
+                                    }
+                                    .group-handle {
+                                        margin-top: 24px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        justify-content: center;
+                                        gap: 12px;
+                                        .btn {
+                                            padding: 7px 0;
+                                            flex: calc(50% - 6px);
+                                            max-width: calc(50% - 6px);
+                                            font-family: 'MarketSans-medium';
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        input,
+        textarea {
+            background: #F7F7F7;
+            border: 1px solid #DCDCDC;
+            border-radius: 4px;
+            padding: 0 9px;
+            width: 100%;
+            color: #514B4D;
+        }
+        input {
+            height: 39px;
+        }
+        textarea {
+            height: 74px;
+        }
+    }
+}

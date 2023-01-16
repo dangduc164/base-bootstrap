@@ -1,0 +1,550 @@
+.p-list-accounts {
+    .l-nav-top {
+        @include brSpLandscape {
+            margin-bottom: 0;
+        }
+    }
+    &__main {
+        position: relative;
+        .container {
+            max-width: 1827px;
+        }
+        .row {
+            .col {
+                &-handle {
+                    padding-left: 0;
+                    padding-right: 0;
+                    .nav {
+                        gap: 16px;
+                        align-items: center;
+                        justify-content: right;
+                        @include brSpLandscape {
+                            justify-content: center;
+                            background: #fff;
+                            gap: 0;
+                            padding: 5px 15px;
+                        }
+                        a {
+                            @include brSpLandscape {
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        &-link {
+                            box-shadow: 0px 4px 4px rgba(189, 189, 189, 0.45);
+                            border-radius: 8px;
+                            font-family: 'MarketSans-medium';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 21px;
+                            color: #000000;
+                            padding: 9px 36px;
+                            background: #fff;
+                            position: relative;
+                            &.active {
+                                background: #FFF6FF;
+                                color: $cBase;
+                            }
+                            @include brSpLandscape {
+                                box-shadow: none;
+                                border-radius: 0;
+                                color: #ACB5BD;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    border-radius: 2px;
+                                    height: 2px;
+                                    background: #121212;
+                                    left: 0;
+                                    bottom: -5px;
+                                    opacity: 0;
+                                    transform: 0.2s all;
+                                }
+                                &.active {
+                                    font-family: 'MarketSans-bold';
+                                    background: none;
+                                    color: #121212;
+                                    font-weight: 700;
+                                    &::after {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        &-item {
+                            @include brSpLandscape {
+                                text-align: center;
+                                flex: 50%;
+                                max-width: 50%;
+                            }
+                            &:nth-child(1) {
+                                .nav-link {
+                                    padding: 9px 16px;
+                                }
+                            }
+                        }
+                    }
+                    .btn-primary {
+                        background: #EF5DCF;
+                        border-radius: 8px;
+                        border: none;
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                        padding: 9px 33px;
+                        &:focus,
+                        &:focus-visible {
+                            border: none;
+                            box-shadow: none;
+                        }
+                        @include brSpLandscape {
+                            padding: 5px 33px;
+                            margin-top: 16px;
+                            display: flex;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                }
+                &-table {
+                    margin-top: 3px;
+                    overflow-x: auto;
+                    @include brSpLandscape {
+                        padding-left: 7px;
+                    }
+                    table {
+                        border-spacing: 0 14px;
+                        border-collapse: separate;
+                        td,
+                        th {
+                            text-align: center;
+                            vertical-align: middle;
+                            padding: 3.5px 13px;
+                            border: none;
+                        }
+                        >thead {
+                            background-color: #5ABAB6;
+                            min-height: 45px;
+                            border-radius: 4px;
+                            margin-bottom: 14px;
+                            >tr {
+                                border-radius: 4px;
+                                outline: 1px solid #5ABAB6;
+                                >th {
+                                    border: 0;
+                                    padding: 10px 13px;
+                                    color: #fff;
+                                    font-family: "MarketSans-medium";
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                        >tbody {
+                            >tr {
+                                border-top: none;
+                                outline: 1px solid #DDE2E5;
+                                border-radius: 4px;
+                                >td {
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    &.email {
+                                        color: #4263EB;
+                                    }
+                                    &.done {
+                                        color: #4EAF48;
+                                    }
+                                    &.pending {
+                                        color: #FE0000;
+                                    }
+                                }
+                                >th {
+                                    color: #000;
+                                }
+                            }
+                        }
+                        button {
+                            height: 49px;
+                            width: 49px;
+                            border: none;
+                            border-radius: 5px;
+                            background-color: rgba($color: #001E66, $alpha: 0.1);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &.btn-delete {
+                                &:hover {
+                                    background-color: rgba($color: $cBase, $alpha: 0.1);
+                                }
+                            }
+                            &:hover {
+                                background-color: rgba($color: #5ABAB6, $alpha: 0.2);
+                            }
+                        }
+                    }
+                    &__number {
+                        width: 40px;
+                        min-width: 40px;
+                    }
+                    &__name {
+                        width: 208px;
+                        min-width: 208px;
+                    }
+                    &__birthday {
+                        width: 132px;
+                        min-width: 132px;
+                    }
+                    &__gender {
+                        width: 108px;
+                        min-width: 108px;
+                    }
+                    &__email {
+                        width: 240px;
+                        min-width: 240px;
+                    }
+                    &__phone {
+                        width: 155px;
+                        min-width: 155px;
+                    }
+                    &__address {
+                        width: 529px;
+                        min-width: 529px;
+                    }
+                    &__status {
+                        width: 179px;
+                        min-width: 179px;
+                    }
+                    &__handle {
+                        width: 191px;
+                        min-width: 191px;
+                    }
+                    .tab {
+                        &-content {
+                            margin-top: 13px;
+                            .container {
+                                @include brSpLandscape {
+                                    padding-left: 0;
+                                    padding-right: 0;
+                                }
+                            }
+                            &__wrap {
+                                overflow: hidden;
+                                display: flex;
+                                align-items: center;
+                                gap: 2px;
+                                padding: 0 0 8px 8px;
+                            }
+                            &__box {
+                                padding: 8px 12px;
+                                width: 100%;
+                                background-color: #fff;
+                                box-shadow: 0px 2px 4px rgba(189, 189, 189, 0.54);
+                                border-radius: 4px;
+                                min-width: 343px;
+                                transition: 0.4s all;
+                                &.show {
+                                    margin-left: -75px;
+                                    +.tab-content__box-group-btn {
+                                        display: flex;
+                                    }
+                                }
+                                &__inner {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 6px;
+                                }
+                                &-avatar {
+                                    width: 32px;
+                                    height: 32px;
+                                    border: 1px solid #0292B7;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    img {
+                                        width: 28px;
+                                        height: 28px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                &-desc {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .name {
+                                        font-family: 'MarketSans-medium';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 14px;
+                                        line-height: 24px;
+                                        text-transform: uppercase;
+                                        color: #212429;
+                                    }
+                                    .status {
+                                        font-size: 12px;
+                                        line-height: 16px;
+                                        color: rgba($color: #495057, $alpha: 0.5);
+                                    }
+                                }
+                                &-group-btn {
+                                    display: none;
+                                    align-items: center;
+                                    gap: 2px;
+                                    transition: .8s all;
+                                    .btn {
+                                        border-radius: 4px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        text-align: center;
+                                        padding: 7px 4px;
+                                        img {
+                                            margin: auto;
+                                        }
+                                        span {
+                                            font-family: 'MarketSans-medium';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 24px;
+                                            color: #FFFFFF;
+                                        }
+                                    }
+                                }
+                                &-status {
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 12px;
+                                    line-height: 19px;
+                                    text-align: right;
+                                    color: #F43258;
+                                }
+                            }
+                            .list-accounts {
+                                .modal {
+                                    &-dialog {
+                                        // margin: 23px;
+                                    }
+                                    &-content {
+                                        padding: 19px 0 15px;
+                                    }
+                                    &-body {
+                                        p {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-family: 'MarketSans-medium';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            line-height: 21px;
+                                            color: #231F20;
+                                            margin-bottom: 24px;
+                                            img {
+                                                margin-right: 10px;
+                                            }
+                                            span {
+                                                color: #F43258;
+                                                margin-left: 5px;
+                                            }
+                                        }
+                                        .group-handle {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-wrap: wrap;
+                                            gap: 12px;
+                                            button {
+                                                flex: calc(50% - 12px);
+                                                max-width: calc(50% - 12px);
+                                                padding: 4px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__popup {
+            .modal {
+                &-dialog {
+                    width: 850px;
+                    max-width: calc(100% - 100px);
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @include brSpLandscape {
+                        max-width: calc(100% - 32px);
+                    }
+                }
+                &-content {
+                    border-radius: 0;
+                    padding-top: 33px;
+                    padding-bottom: 30px;
+                }
+                &-header {
+                    border: none;
+                    justify-content: center;
+                    h5 {
+                        color: #EF5DCF;
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 36px;
+                        line-height: 24px;
+                    }
+                    .close {
+                        position: absolute;
+                        right: -33px;
+                        top: -33px;
+                    }
+                }
+                &-body {
+                    form {
+                        margin-top: 31px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 545px;
+                        max-width: 100%;
+                        .form-item {
+                            margin-bottom: 24px;
+                            label {
+                                font-family: 'Noto Sans JP';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 29px;
+                                color: #231F20;
+                            }
+                            input,
+                            select {
+                                background: rgba(255, 255, 255, 0.2);
+                                border: 1px solid #DCDCDC;
+                                border-radius: 8px;
+                                width: 100%;
+                                height: 54px;
+                                padding: 0 15px;
+                                margin-top: -3px;
+                                &:focus,
+                                &:focus-visible {
+                                    outline: none;
+                                }
+                                @include brSpLandscape {
+                                    height: 39px;
+                                }
+                            }
+                            select {
+                                appearance: none;
+                                background: url('../../assets/img/list-accounts/icn-selecter.svg') no-repeat center right 15px;
+                            }
+                            &:nth-child(2),
+                            &:last-of-type {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 23px;
+                            }
+                            &:nth-child(2) {
+                                @include brSpLandscape {
+                                    display: block;
+                                }
+                            }
+                            &:last-of-type {
+                                margin-top: 56px;
+                                @include brSpLandscape {
+                                    gap: 12px;
+                                }
+                            }
+                            >div,
+                            button {
+                                flex: calc(50%);
+                                max-width: calc(50%);
+                            }
+                            >div {
+                                @include brSpLandscape {
+                                    max-width: 100%;
+                                    +div {
+                                        margin-top: 24px;
+                                    }
+                                }
+                            }
+                            button {
+                                &.btn {
+                                    border-radius: 8px;
+                                    border: none;
+                                    padding: 12.5px;
+                                    font-family: 'Noto Sans JP';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 20px;
+                                    line-height: 29px;
+                                    &:focus,
+                                    &:focus-visible {
+                                        border: none;
+                                        outline: none;
+                                        box-shadow: none;
+                                    }
+                                    @include brSpLandscape {
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        font-family: 'MarketSans-medium';
+                                    }
+                                    &-secondary {
+                                        background: #959595;
+                                    }
+                                    &-primary {
+                                        background: #EF5DCF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__alert {
+        position: absolute;
+        top: -5px;
+        text-align: center;
+        width: 100%;
+        background: #FFF1FF;
+        padding: 15px 0;
+        @include brSpLandscape {
+            margin-top: -65px;
+        }
+        p {
+            font-family: 'MarketSans-medium';
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 38px;
+            color: #231F20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                margin-right: 24px;
+            }
+            @include brSpLandscape {
+                font-size: 16px;
+                line-height: 21px;
+                text-align: left;
+            }
+        }
+    }
+}

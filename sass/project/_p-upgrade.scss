@@ -1,0 +1,153 @@
+.p-upgrade {
+    &__main {
+        margin-top: 46px;
+        @include brSpLandscape {
+            margin-top: 17px;
+        }
+        &__title {
+            text-align: center;
+            margin-bottom: 64px;
+            @include brSpLandscape {
+                margin-bottom: 38px;
+            }
+            h3 {
+                font-family: 'MarketSans-medium';
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 41px;
+                color: #000000;
+                @include brSpLandscape {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+            }
+            p {
+                font-family: 'MarketSans-medium';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: #514B4D;
+                margin-top: 14px;
+                @include brSpLandscape {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+            }
+        }
+        &__box {
+            position: relative;
+            width: 757px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 92px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: #F43258;
+                border-radius: 16px;
+                width: calc(100% - 17px);
+                height: calc(100% - 19px);
+                z-index: 0;
+                @include brSpLandscape {
+                    width: calc(100% - 7px);
+                }
+            }
+            &__inner {
+                position: relative;
+                z-index: 2;
+                padding: 37px 39px 31px;
+                width: 659px;
+                width: calc(100% - 98px);
+                max-width: 100%;
+                background: #FFFFFF;
+                border: 1px solid #F43258;
+                box-shadow: 0px 0px 12px rgba(189, 189, 189, 0.25);
+                border-radius: 16px;
+                @include brSpLandscape {
+                    width: calc(100% - 46px);
+                    padding: 16px 18px 0px;
+                }
+                &-title {
+                    position: relative;
+                    padding-bottom: 24px;
+                    @include brSpLandscape {
+                        padding-bottom: 13px;
+                    }
+                    h3 {
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 36px;
+                        line-height: 47px;
+                        color: #F43258;
+                        @include brSpLandscape {
+                            font-size: 20px;
+                            line-height: 26px;
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 212px;
+                        height: 1px;
+                        background: #F43258;
+                    }
+                }
+                &-option {
+                    margin-top: 21px;
+                    >ul {
+                        >li {
+                            margin-bottom: 12px;
+                            p {
+                                display: flex;
+                                align-items: flex-start;
+                                gap: 10px;
+                                span {
+                                    margin-top: 3px;
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 21px;
+                                    color: #231F20;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-btn {
+                .btn {
+                    width: 200px;
+                    padding: 14px 33px 13px 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 23px;
+                    right: 36px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+                    border-radius: 8px;
+                    font-family: 'MarketSans-medium';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: #F43258;
+                    border: none;
+                    @include brSpLandscape {
+                        bottom: 16px;
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,704 @@
+.p-list-accounts-linked {
+    .l-nav-top {
+        position: relative;
+        z-index: 999;
+    }
+    &__main {
+        position: relative;
+        .container-fluid {
+            padding-left: 27px;
+            padding-right: 27px;
+            @include brSpLandscape {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        &__btn-add {
+            text-align: end;
+            @include brSpLandscape {
+                margin-top: 16px;
+                text-align: center;
+            }
+            .btn-show-modal {
+                position: relative;
+                z-index: 2;
+                font-family: 'MarketSans-medium';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #FFFFFF;
+                background: #EF5DCF;
+                border-radius: 4px;
+                padding: 5px 36px;
+            }
+            .modal {
+                &-dialog {
+                    width: 850px;
+                    max-width: calc(100% - 100px);
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @include brSpLandscape {
+                        max-width: calc(100% - 32px);
+                    }
+                }
+                &-content {
+                    border-radius: 0;
+                    padding: 33px 40px 200px;
+                    @include brSpLandscape {
+                        padding: 3px 0 45px;
+                        border-radius: 4px;
+                    }
+                }
+                &-header {
+                    display: block;
+                    text-align: center;
+                    border: none;
+                    h5 {
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 36px;
+                        line-height: 47px;
+                        color: #EF5DCF;
+                    }
+                    p {
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 26px;
+                        color: #231F20;
+                    }
+                    @include brSpLandscape {
+                        h5 {
+                            font-size: 20px;
+                            line-height: 26px;
+                            color: #852988;
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 21px;
+                            margin-top: 6px;
+                        }
+                    }
+                    .close {
+                        position: absolute;
+                        right: -33px;
+                        top: -33px;
+                        @include brSpLandscape {
+                            display: none;
+                        }
+                    }
+                }
+                &-body {
+                    margin-top: 7px;
+                    form {
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 586px;
+                        max-width: 100%;
+                        padding-left: 21px;
+                        padding-right: 21px;
+                        input {
+                            width: 100%;
+                            border: 1px solid #514B4D;
+                            border-radius: 8px;
+                            height: 54px;
+                            padding: 0 15px;
+                            @include brSpLandscape {
+                                height: 39px;
+                                border-radius: 4px;
+                            }
+                        }
+                        .form-item {
+                            text-align: left;
+                            position: relative;
+                            margin-bottom: 24px;
+                            @include brSpLandscape {
+                                margin-bottom: 16px;
+                            }
+                            &:nth-child(3) {
+                                margin-top: 110px;
+                                @include brSpLandscape {
+                                    margin-top: 37px;
+                                }
+                            }
+                            label {
+                                font-family: 'MarketSans-medium';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 26px;
+                                color: #231F20;
+                                @include brSpLandscape {
+                                    font-size: 16px;
+                                    line-height: 21px;
+                                }
+                            }
+                            .desc {
+                                font-family: 'MarketSans-medium';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 18px;
+                                color: #000000;
+                                position: absolute;
+                                background: #FFFFFF;
+                                box-shadow: 0px 1px 4px rgba(189, 189, 189, 0.45);
+                                border-radius: 4px 0px 4px 4px;
+                                padding: 3px 12px;
+                                transition: 0.4s all;
+                                right: 19px;
+                                top: 17px;
+                                opacity: 0;
+                                &.show {
+                                    opacity: 1;
+                                }
+                            }
+                            .btn {
+                                &:focus,
+                                &:focus-visible {
+                                    box-shadow: none;
+                                }
+                                &-paste {
+                                    padding: 0;
+                                    position: absolute;
+                                    right: 18px;
+                                    background: none;
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 20px;
+                                    line-height: 26px;
+                                    color: #DCDCDC;
+                                    bottom: 14px;
+                                    @include brSpLandscape {
+                                        font-size: 16px;
+                                        line-height: 21px;
+                                        font-family: 'MarketSans';
+                                        font-weight: 400;
+                                        bottom: 11px;
+                                    }
+                                }
+                                &-more {
+                                    position: absolute;
+                                    top: 3px;
+                                    right: 0;
+                                }
+                                &-danger {
+                                    border: none;
+                                    width: 100%;
+                                    background: #EF5DCF;
+                                    border-radius: 8px;
+                                    padding: 14px 0;
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 20px;
+                                    line-height: 26px;
+                                    @include brSpLandscape {
+                                        color: #F8F9FA;
+                                        background: #852988;
+                                        border-radius: 4px;
+                                        padding: 8px;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .row {
+            .col {
+                &-table {
+                    margin-top: -47px;
+                    overflow-x: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: 905px;
+                    @media (max-width: 1360px) {
+                        margin-top: 0;
+                    }
+                    table {
+                        background-color: #fff;
+                        border-spacing: 0 14px;
+                        border-collapse: separate;
+                        td,
+                        th {
+                            vertical-align: middle;
+                            padding: 10px 25px;
+                            border: none;
+                        }
+                        >thead {
+                            background-color: #5ABAB6;
+                            min-height: 45px;
+                            border-radius: 4px;
+                            margin-bottom: 14px;
+                            >tr {
+                                border-radius: 4px;
+                                outline: 1px solid #5ABAB6;
+                                >th {
+                                    border: 0;
+                                    padding: 10px 25px;
+                                    color: #fff;
+                                    font-family: "MarketSans-medium";
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                        >tbody {
+                            >tr {
+                                border-top: none;
+                                position: relative;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: calc(100% - 22px);
+                                    height: 100%;
+                                    border: 1px solid #DDE2E5;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    border-radius: 4px;
+                                    z-index: 0;
+                                }
+                                >td {
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    position: relative;
+                                    z-index: 1;
+                                    .btn {
+                                        width: 114px;
+                                        border-radius: 4px;
+                                        padding: 5px;
+                                        margin-right: 12px;
+                                        border: none;
+                                        transition: 0.3s;
+                                        font-weight: 600;
+                                        font-family: 'MarketSans-semibold';
+                                        &:last-of-type {
+                                            margin-right: 0;
+                                        }
+                                        &-primary {
+                                            background-color: rgba($color: #852988, $alpha: 0.3);
+                                            &:hover {
+                                                background: #852988;
+                                            }
+                                        }
+                                        &-danger {
+                                            color: #FF0000;
+                                            background-color: rgba($color: #F43258, $alpha: 0.3);
+                                            &:hover {
+                                                color: #fff;
+                                                background: #F43258;
+                                            }
+                                        }
+                                        &-success {
+                                            background-color: rgba($color: #5ABAB6, $alpha: 0.3);
+                                            &:hover {
+                                                background: #5ABAB6;
+                                            }
+                                        }
+                                        &:focus,
+                                        &:focus-visible {
+                                            box-shadow: none;
+                                        }
+                                        &:hover {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                >th {
+                                    color: #000;
+                                }
+                            }
+                        }
+                        button {
+                            height: 49px;
+                            width: 49px;
+                            border: none;
+                            border-radius: 5px;
+                            background-color: rgba($color: #001E66, $alpha: 0.1);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &.btn-delete {
+                                &:hover {
+                                    background-color: rgba($color: #852988, $alpha: 0.1);
+                                }
+                            }
+                            &:hover {
+                                background-color: rgba($color: #5ABAB6, $alpha: 0.2);
+                            }
+                        }
+                    }
+                    &__email {
+                        width: 203px;
+                        min-width: 203px;
+                    }
+                    &__date {
+                        width: 368px;
+                        min-width: 368px;
+                    }
+                    &__handle {
+                        width: 304px;
+                        min-width: 304px;
+                    }
+                    .tab {
+                        &-content {
+                            margin-top: 13px;
+                            .container {
+                                @include brSpLandscape {
+                                    padding-left: 0;
+                                    padding-right: 0;
+                                }
+                            }
+                            &__wrap {
+                                overflow: hidden;
+                                display: flex;
+                                align-items: center;
+                                gap: 2px;
+                                padding: 0 0 8px 8px;
+                            }
+                            &__box {
+                                padding: 8px 12px;
+                                width: 100%;
+                                background-color: #fff;
+                                box-shadow: 0px 2px 4px rgba(189, 189, 189, 0.54);
+                                border-radius: 4px;
+                                min-width: 343px;
+                                transition: 0.4s all;
+                                &.show {
+                                    margin-left: -75px;
+                                    +.tab-content__box-group-btn {
+                                        display: flex;
+                                    }
+                                }
+                                &__inner {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 6px;
+                                }
+                                &-avatar {
+                                    width: 32px;
+                                    height: 32px;
+                                    border: 1px solid #0292B7;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    img {
+                                        width: 28px;
+                                        height: 28px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                &-desc {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .name {
+                                        font-family: 'MarketSans-medium';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 14px;
+                                        line-height: 24px;
+                                        text-transform: uppercase;
+                                        color: #212429;
+                                    }
+                                    .status {
+                                        font-size: 12px;
+                                        line-height: 16px;
+                                        color: rgba($color: #495057, $alpha: 0.5);
+                                    }
+                                }
+                                &-group-btn {
+                                    display: none;
+                                    align-items: center;
+                                    gap: 2px;
+                                    transition: .8s all;
+                                    .btn {
+                                        border-radius: 4px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        text-align: center;
+                                        padding: 7px 4px;
+                                        img {
+                                            margin: auto;
+                                        }
+                                        span {
+                                            font-family: 'MarketSans-medium';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 24px;
+                                            color: #FFFFFF;
+                                        }
+                                    }
+                                }
+                                &-status {
+                                    font-family: 'MarketSans-medium';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 12px;
+                                    line-height: 19px;
+                                    text-align: right;
+                                    color: #F43258;
+                                }
+                            }
+                            .list-accounts {
+                                .modal {
+                                    &-dialog {
+                                        margin: 23px;
+                                    }
+                                    &-content {
+                                        padding: 19px 0 15px;
+                                    }
+                                    &-body {
+                                        p {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-family: 'MarketSans-medium';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            line-height: 21px;
+                                            color: #231F20;
+                                            margin-bottom: 24px;
+                                            img {
+                                                margin-right: 10px;
+                                            }
+                                            span {
+                                                color: #F43258;
+                                                margin-left: 5px;
+                                            }
+                                        }
+                                        .group-handle {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-wrap: wrap;
+                                            gap: 12px;
+                                            button {
+                                                flex: calc(50% - 12px);
+                                                max-width: calc(50% - 12px);
+                                                padding: 4px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .list-accounts {
+            margin-top: 12px;
+            padding-left: 11px;
+            padding-right: 11px;
+            .modal {
+                &-dialog {
+                    // margin: 23px;
+                }
+                &-content {
+                    padding: 19px 0 15px;
+                }
+                &-body {
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 21px;
+                        color: #231F20;
+                        margin-bottom: 24px;
+                        img {
+                            margin-right: 10px;
+                        }
+                        span {
+                            color: #F43258;
+                            margin-left: 5px;
+                        }
+                    }
+                    .group-handle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 12px;
+                        button {
+                            flex: calc(50% - 12px);
+                            max-width: calc(50% - 12px);
+                            padding: 4px;
+                        }
+                    }
+                }
+            }
+        }
+        &__box {
+            overflow: hidden;
+            padding: 4px;
+            display: flex;
+            gap: 2px;
+            &-content {
+                width: 100%;
+                $transition: 200ms linear;
+                position: relative;
+                &.show {
+                    label.radio-card {
+                        margin-left: -38px;
+                    }
+                    +.p-list-accounts-linked__main__box-handle {
+                        display: block;
+                    }
+                }
+                label.radio-card {
+                    transition: .6s all;
+                    cursor: pointer;
+                    width: 100%;
+                    position: relative;
+                    min-width: 343px;
+                    .card-content-wrapper {
+                        background: #FFFFFF;
+                        box-shadow: 0px 2px 4px rgba(189, 189, 189, 0.54);
+                        border-radius: 4px;
+                        width: 100%;
+                        min-height: 56px;
+                        padding: 1px 12px;
+                        display: grid;
+                        transition: $transition;
+                        position: relative;
+                    }
+                    .check-icon {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 17px;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        border: 2px solid #DCDCDC;
+                        border-radius: 50%;
+                        transition: $transition;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 13.57px;
+                            height: 13.57px;
+                            border-radius: 50%;
+                            background: #852988;
+                            transition: $transition;
+                            opacity: 0;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    input[type='radio'] {
+                        display: none;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        &:checked {
+                            +.card-content-wrapper {
+                                .check-icon {
+                                    background-color: #FFF;
+                                    border-color: #852988;
+                                    &:before {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        &:focus {
+                            +.card-content-wrapper {
+                                .check-icon {
+                                    border-color: #852988;
+                                }
+                            }
+                        }
+                    }
+                    .card-content {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        &-avatar {
+                            width: 32px;
+                            height: 32px;
+                            border: 1px solid #0292B7;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img {
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                            }
+                        }
+                        &-desc {
+                            text-align: left;
+                            h4 {
+                                font-family: 'MarketSans-medium';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 21px;
+                                text-transform: uppercase;
+                                color: #212429;
+                            }
+                            p {
+                                font-size: 12px;
+                                line-height: 16px;
+                                color: rgba($color: #495057, $alpha: 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+            &-handle {
+                display: none;
+                transition: 0.6s all;
+                &.show {
+                    display: block;
+                }
+                .btn {
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 7px 4px;
+                    img {
+                        margin: auto;
+                    }
+                    span {
+                        font-family: 'MarketSans-medium';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
